@@ -6,6 +6,9 @@ Guess the Note Game
 
 "use strict";
 
+var AudioContext = window.AudioContext // Default
+                || window.webkitAudioContext; // Safari and old versions of Chrome
+
 (function() {
 	var wkCount = 11;
 	var synth;
