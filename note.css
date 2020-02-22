@@ -1,0 +1,90 @@
+/*
+Manvir Singh
+Guess the Note Game
+9/16/13
+*/
+
+#container {
+	height: 600px;
+	width: 950px;
+	background-color: red;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	border: 1px solid black;
+}
+
+#gamePanel {
+	height: 100px;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	background-color: #eee;
+}
+
+.button {
+	border-radius: 10px;
+	height: 90px;
+	width: 180px;
+	background-color: black;
+	color: white;
+	position: absolute;
+	cursor: pointer;
+	top: 5px;
+	font-family: fantasy;
+	font-size: 2.5em;
+	display: table;
+}
+
+.display {
+	height: 90px;
+	width: 250px;
+	color: black;
+	position: absolute;
+	cursor: pointer;
+	top: 5px;
+	font-family: fantasy;
+	font-size: 2.5em;
+	display: table;
+}
+
+.button p, .display p {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#piano {
+	height: 500px;
+	width: 100%;
+	background-color: black;
+	position: absolute;
+	top: 100px;
+}
+
+.key {
+	height: 496px;
+	width: 90px;
+	background-color: white;
+	border: 2px solid black;
+	position: absolute;
+}
+
+.bkey {
+	background-color: black;
+	height: 315px;
+	width: 60px;
+	z-index: 1;
+}
+
+.key:hover {
+	cursor: pointer;
+}
+
+.key:active {
+	background-color: #eee; 
+}
+
+.bkey:active {
+	background-color: #222;
+}
+
