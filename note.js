@@ -111,12 +111,12 @@ var AudioContext = window.AudioContext // Default
 	}
 
 	function play() {
-  context.resume()
+    context.resume();
 		synth[this.id].connect(context.destination);
 		var id = this.id
 		setTimeout(function() { synth[id].disconnect(); }, 750);
 		score -= 10;
-		currentKey = this;
+		if (!this.classList.contains('button')) currentKey = this;
 		document.getElementById("scoreD").innerHTML = "<p>Score: " + score + "</p>";
 	}
 
@@ -125,7 +125,7 @@ var AudioContext = window.AudioContext // Default
 	}
 
 	function check() {
-		if (playB.id == currentKey.id) {
+		if (currentKey && playB.id == currentKey.id) {
 			score += 500;
 			alert("Right!!!!!");
 		} else {
